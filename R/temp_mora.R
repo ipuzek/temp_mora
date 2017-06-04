@@ -38,7 +38,7 @@ df.temps.long <- df.temps.3 %>%
 
 # write it!
 
-setwd("/home/ivan/Dropbox/temp_mora")
+setwd("/home/ivan/temp_mora/podaci")
 write.csv2(df.temps.long, file.to.write)
 
 #
@@ -77,7 +77,8 @@ pljot <- df.to.pljot %>%
   theme(legend.justification=c(1,0), legend.position=c(1,0))
 
 
-ggsave("tempMora.svg", pljot)
+setwd("/home/ivan/temp_mora/graf")
+ggsave("temp_graf.svg", pljot)
 
 # # broj validnih mjerenja
 na.omit(df.temps.long) %>% xtabs(~grad, .) %>% sort(decreasing = TRUE)
