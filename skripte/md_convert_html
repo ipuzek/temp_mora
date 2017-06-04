@@ -1,0 +1,1 @@
+pandoc /home/ivan/temp_mora/README.md -o /home/ivan/temp_mora/index.html
