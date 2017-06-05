@@ -1,5 +1,7 @@
+/usr/bin/Rscript /home/ivan/temp_mora/R/temp_mora.R
+
 cd /home/ivan/temp_mora
-
-/usr/bin/Rscript R/temp_mora.R
-git pull && git add -A && git commit -m "ajmo ponedjeljak" && git push
-
+HOME=/home/ivan git pull
+git add -A
+git commit -m "ajmo utorak"
+HOME=/home/ivan git push
