@@ -39,7 +39,7 @@ df.temps.long <- df.temps.3 %>%
 # write it!
 
 setwd("/home/ivan/temp_mora/podaci")
-write.csv2(df.temps.long, file.to.write)
+write.csv2(df.temps.long, file.to.write, row.names = FALSE)
 
 #
 
@@ -58,7 +58,7 @@ read_tempZ <- function(x) {
 
 csv.only <- list.files()[str_detect(list.files(), "csv")]
 
-df.temps.long <- map_df(csv.only, read_tempZ)
+df.temps.long <- map_df(csv.only, read_tempZ) %>% select(-X1)
 
 gradovi.s.plutacom <- c("Dubrovnik", "Zadar", "Mali Lošinj", "Malinska", "Crikvenica") # od juga prema sjeveru
 
