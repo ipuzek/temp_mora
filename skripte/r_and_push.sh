@@ -1,7 +1,10 @@
-/usr/bin/Rscript /home/ivan/temp_mora/R/temp_mora.R
+# ova skripta je za bolja vremena
+# kad skužim kako cron koristi ssh ključeve
 
-cd /home/ivan/temp_mora
-HOME=/home/ivan git pull
-git add -A
-git commit -m "ajmo utorak"
-HOME=/home/ivan git push
+# /usr/bin/Rscript /home/ivan/temp_mora/R/temp_mora.R
+
+# cd /home/ivan/temp_mora
+# HOME=/home/ivan git pull
+# git add -A
+# git commit -m "ajmo utorak"
+# HOME=/home/ivan git push
