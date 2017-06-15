@@ -42,7 +42,7 @@ df.temps.long <- df.temps.3 %>%
 # write it!
 
 setwd("/home/ivan/temp_mora/podaci")
-setwd("/home/ivan/mali_git_projekti/temp_mora/podaci")
+# setwd("/home/ivan/mali_git_projekti/temp_mora/podaci")
 write.csv2(df.temps.long, file.to.write, row.names = FALSE)
 
 #
@@ -91,7 +91,7 @@ pljot.zoomed <- pljot +
   geom_point(size = .5)
 
 setwd("/home/ivan/temp_mora/graf")
-setwd("/home/ivan/mali_git_projekti/temp_mora/graf")
+# setwd("/home/ivan/mali_git_projekti/temp_mora/graf")
 
 ggsave("temp_graf.svg", pljot, width = 210, height = 148, units = "mm")
 ggsave("temp_graf_zoom.svg", pljot.zoomed, width = 210, height = 148, units = "mm")
