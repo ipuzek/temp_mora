@@ -36,9 +36,13 @@ df.temps.long <- df.temps.3 %>%
          grad = fct_relevel(grad, "Zadar")) %>% 
   select(grad, temp, vrijeme)
 
+# View it
+
+# View(df.temps.long)
 # write it!
 
 setwd("/home/ivan/temp_mora/podaci")
+setwd("/home/ivan/mali_git_projekti/temp_mora/podaci")
 write.csv2(df.temps.long, file.to.write, row.names = FALSE)
 
 #
@@ -76,9 +80,21 @@ pljot <- df.to.pljot %>%
   labs(x = "", y = "temperatura", colour = "grad", caption = today()) +
   theme(legend.justification=c(1,0), legend.position=c(1,0))
 
+# zoom in
+granice <- c(
+  today() - ddays(14),
+  today()
+  ) %>% as.POSIXct()
+
+pljot.zoomed <- pljot +
+  coord_cartesian(xlim = granice, ylim = c(20,25)) +
+  geom_point(size = .5)
 
 setwd("/home/ivan/temp_mora/graf")
-ggsave("temp_graf.svg", pljot)
+setwd("/home/ivan/mali_git_projekti/temp_mora/graf")
+
+ggsave("temp_graf.svg", pljot, width = 210, height = 148, units = "mm")
+ggsave("temp_graf_zoom.svg", pljot.zoomed, width = 210, height = 148, units = "mm")
 
 # # broj validnih mjerenja
 na.omit(df.temps.long) %>% xtabs(~grad, .) %>% sort(decreasing = TRUE)
