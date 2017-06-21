@@ -1,8 +1,8 @@
-# temp_mora
-moj prvi web!
+# temperatura mora
+nije moj prvi web, ali je svakako najbolji!
 
 ![temperatura mora](graf/temp_graf.svg)
 
-tko ti je dopustio!!
+zum upitne korisnosti
 
 ![temperatura mora - zadnjih tjedan dana](graf/temp_graf_zoom.svg)
