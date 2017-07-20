@@ -68,6 +68,7 @@ gradovi.s.plutacom <- c("Dubrovnik", "Zadar", "Mali Lošinj", "Malinska", "Crikv
 
 # # fct_reorder2 je OK, ali je osjetljiv na zadnji rezultat, bolje ovako...
 # dataframe %>% mutate(grad = factor(grad, levels = gradovi.s.plutacom, ordered = TRUE))
+# kad bi dataframe$grad bio faktor, koristio bi forcats::relevel(grad, gradovi.s.plutacom)
 
 df.to.pljot <- df.temps.long %>%
   filter(grad %in% gradovi.s.plutacom) %>%
