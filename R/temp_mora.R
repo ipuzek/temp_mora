@@ -88,7 +88,7 @@ granice <- c(
   ) %>% as.POSIXct()
 
 pljot.zoomed <- pljot +
-  coord_cartesian(xlim = granice, ylim = c(20,25)) +
+  coord_cartesian(xlim = granice) +
   geom_point(size = .5)
 
 setwd("/home/ivan/temp_mora/graf")
