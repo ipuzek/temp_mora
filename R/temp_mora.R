@@ -78,8 +78,8 @@ pljot <- df.to.pljot %>%
   ggplot(aes(x = vrijeme, y = temp, colour = grad)) +
   geom_smooth(se = FALSE) +
   geom_point(size = .2) + # data = filter(df.temps.long, grad == "Zadar"), size = 1.5) +
-  labs(x = "", y = "temperatura", colour = "grad", caption = today()) +
-  theme(legend.justification=c(1,0), legend.position=c(1,0))
+  labs(x = "", y = "temperatura", colour = "grad", caption = today())
+  # theme(legend.justification=c(1,0), legend.position=c(1,0))
 
 # zoom in
 granice <- c(
